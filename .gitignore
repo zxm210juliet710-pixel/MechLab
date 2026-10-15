@@ -1,0 +1,14 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+
+# TypeScript 增量编译缓存
+*.tsbuildinfo
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
