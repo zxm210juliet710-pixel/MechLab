@@ -1,0 +1,24 @@
+{
+  "name": "mech-lab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "白日机械实验室 - 直齿圆柱齿轮设计、运动模拟与图纸导出",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "selftest": "esbuild scripts/selftest.ts --bundle --format=esm --outfile=node_modules/.cache/selftest.mjs && node node_modules/.cache/selftest.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11"
+  }
+}
