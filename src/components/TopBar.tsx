@@ -17,7 +17,7 @@ export function TopBar({ onOpenLibrary, onOpenHelp, onExport, onClear, onOpenMfg
   return (
     <header className="topbar">
       <div className="logo">
-        <img className="logo-mark" src="/logo.png" alt="白日机械实验室标志" />
+       <img className="logo-mark" src={`${import.meta.env.BASE_URL}logo.png`} alt="白日机械实验室标志" />
         <div>
           <div className="logo-title">白日机械实验室</div>
           <div className="logo-sub">生成机械 · 理解运动 · 动手制造</div>
