@@ -156,16 +156,7 @@ export function LibraryModal({ onClose }: { onClose: () => void }) {
         <div className="lib-card" role="button" tabIndex={0}
           onClick={() => { editorStore.addGear(); onClose() }}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); editorStore.addGear(); onClose() } }}>
-          <svg className="mini-gear" viewBox="-25 -25 50 50">
-            <g transform="scale(1 -1)">
-              <g stroke="#F47732" strokeWidth="3" fill="#fff" strokeLinejoin="round">
-                <path d="M22 0a22 22 0 0 1-2.9 10.9l-2.3-1.3a19 19 0 0 0 0-19.2l2.3-1.3A22 22 0 0 1 22 0Z" />
-              </g>
-              <circle cx="0" cy="0" r="17" fill="none" stroke="#D95D1E" strokeWidth="2.5"
-                strokeDasharray="4 3" />
-              <circle cx="0" cy="0" r="5" fill="#F47732" />
-            </g>
-          </svg>
+          <img className="mini-gear" src={`${import.meta.env.BASE_URL}lib-gear.png`} alt="标准直齿圆柱齿轮" />
           <div>
             <b>标准直齿圆柱齿轮 <span className="lib-tag">零件</span></b>
             <span className="lib-desc">渐开线齿形，压力角 20°，模数与齿数可调，支持啮合检查、运动模拟与 SVG / DXF 导出。</span>
@@ -175,9 +166,9 @@ export function LibraryModal({ onClose }: { onClose: () => void }) {
         <div className="lib-card" role="button" tabIndex={0}
           onClick={() => { editorStore.addMechanism('rackPinion'); onClose() }}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); editorStore.addMechanism('rackPinion'); onClose() } }}>
-          <span className="mini-symbol">⚙＋▭</span>
+          <img className="mini-gear" src={`${import.meta.env.BASE_URL}lib-rack.png`} alt="齿轮齿条" />
           <div>
-            <b>齿轮齿条机构 <span className="lib-tag">机构</span></b>
+            <b>齿轮齿条 <span className="lib-tag">机构</span></b>
             <span className="lib-desc">含渐开线齿轮、真实齿形齿条、固定轴承座与直线导轨。齿轮转动带动齿条做直线运动，位移 s = r × Δθ。</span>
           </div>
         </div>
@@ -188,9 +179,9 @@ export function LibraryModal({ onClose }: { onClose: () => void }) {
         <div className="lib-card" role="button" tabIndex={0}
           onClick={() => { editorStore.addMechanism('crankSlider'); onClose() }}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); editorStore.addMechanism('crankSlider'); onClose() } }}>
-          <span className="mini-symbol">○─◉─▭</span>
+          <img className="mini-gear" src={`${import.meta.env.BASE_URL}lib-crank.png`} alt="曲柄滑块" />
           <div>
-            <b>曲柄滑块机构 <span className="lib-tag">机构</span></b>
+            <b>曲柄滑块 <span className="lib-tag">机构</span></b>
             <span className="lib-desc">含固定机架、曲柄、连杆、滑块与三处转动副。曲柄连续转动，滑块沿导轨做往复直线运动。</span>
           </div>
         </div>
@@ -198,9 +189,9 @@ export function LibraryModal({ onClose }: { onClose: () => void }) {
         <div className="lib-card" role="button" tabIndex={0}
           onClick={() => { editorStore.addMechanism('fourBar'); onClose() }}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); editorStore.addMechanism('fourBar'); onClose() } }}>
-          <span className="mini-symbol">▱</span>
+          <img className="mini-gear" src={`${import.meta.env.BASE_URL}lib-fourbar.png`} alt="四连杆" />
           <div>
-            <b>四连杆机构 <span className="lib-tag">机构</span></b>
+            <b>四连杆 <span className="lib-tag">机构</span></b>
             <span className="lib-desc">机架、曲柄、连杆、摇杆经四个转动副首尾铰接。曲柄整周转动，摇杆往复摆动，自动按格拉霍夫条件检查杆长。</span>
           </div>
         </div>
